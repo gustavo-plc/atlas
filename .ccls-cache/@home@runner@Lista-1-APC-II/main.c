@@ -38,5 +38,6 @@ int main() {
   *p_a = temp;
   
   printf("Após manipulação com o ponteiro, o valor das variáveis são: a = %d e b = %d\n\n", a, b);
+  printf("Nome: Gustavo Parreira Lima Cunha\nMatrícula: 2312130085\n\n");
   return 0;
 }
