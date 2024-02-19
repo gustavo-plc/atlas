@@ -2,59 +2,58 @@
 //e serão executadas na main
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 #include "calc.h" // inclui os protótipos dessa biblioteca
 
-struct calc {
+struct calc {   // definindo a estrutura já declarada no header
     float mem;
 };
 
+criarCalc()
+{
+    Calc *a = malloc(sizeof(Calc));
+    a->mem = 0;
+    return a->mem;
+}
 
-// calcula a distância entre dois pontos
-float ponto_distancia(Ponto *p1, Ponto *p2) {
-    if(!p1 || !p2) return -1;
-    float dx = p1->x - p2->x;
-    float dy = p1->y - p2->y;
-    return sqrt(dx*dx + dy*dy);
+exibirCalc(Calc *c)
+{
+    printf("Memória: %f\n", c->mem)
+}
+
+destruirCalc(Calc *c)
+{
+    free(c);
+}
+
+zerarCalc(Calc *c)
+{
+    c->mem = 0;
 }
 
 
-float soma(Calc c, float b)
+float soma(Calc *c, float n)
 {
-    float n2;
-    Calc a;
-    a->mem = a->mem + n2;
+    float n;
+    c->mem = c->mem + n;
 }
 
-float subt(float n1, float n2)
+float subt(Calc *c, float n)
 {
-    float n2;
-    Calc a;
-    a->mem = a->mem - n2;
+    float n;
+    c->mem = c->mem - n;
 }
 
-float mult(float n1, float n2)
+float mult(Calc *c, float n)
 {
-    float n2;
-    Calc a;
-    a->mem = a->mem * n2;
+    float n;
+    c->mem = c->mem * n;
 }
 
-float div(float n1, float n2)
+float div(Calc *c, float n)
 {
-    float n2;
-    Calc a;
-    a->mem = a->mem / n2;
-}
-
-float exibirmem(void)
-{
-    prin
-}
-
-float apagarmem(void) 
-{
-
-
+    float n;
+    c->mem = c->mem / n;
 }
