@@ -12,13 +12,11 @@ Calc criarCalc();
 
 void destruirCalc();
 void zerarCalc();
-float exibirCalc(void)
+void exibirCalc()
 
-float soma(Calc *c, float n);
-float subt(float n1, float n2);
-float mult(float n1, float n2);
-float div(float n1, float n2);
-
-
+void soma(Calc *c, float n);
+void subt(Calc *c, float n);
+void mult(Calc *c, float n);
+void div(Calc *c, float n);
 
 #endif
